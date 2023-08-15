@@ -29,9 +29,6 @@ h1 {
     margin: center;
     padding-top: 0.5rem;
 
-
-
-
 }
 
 .navlink {
@@ -63,7 +60,7 @@ h1 {
     width: 125px;
     text-align: center;
     margin: auto;
-    margin-top: 20rem;
+    margin-top: 10rem;
 
 }
 
@@ -79,7 +76,7 @@ img {
 
 img:hover{
     opacity: 0.5;
-    
+
 }
 
 .img {
@@ -102,7 +99,7 @@ img:hover{
     border-bottom: 2px solid white;
     width: 125px;
     text-align: center;
-    padding-top: 27rem;
+    padding-top: 10rem;
     margin: auto;
 }
 
@@ -143,20 +140,20 @@ img:hover{
 
 textarea{
     padding-top: 15px;
-    
+
 }
 
-.inputSend{
+/* button{
     background-color: #a28a6c;
     font-size: 1.4rem;
     font-weight: 900;
     letter-spacing: 2px;
     color: #e0e0e0;
     margin-bottom: 3rem;
-    
+
 }
 
-.inputSend:hover{
+button:hover{
     background-color: #d2b48c;
     border: 2px solid #d2b48c;
     color: red;
@@ -167,7 +164,65 @@ textarea{
 
 }
 
-.inhov:focus { 
+button:after{
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+    color: red;
+
+}
+button:hover:after{
+    opacity: 1;
+    right: 10px;
+    color:red;
+} */
+
+button {
+    border-radius: 4px;
+    background-color: #a28a6c;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    /* display: block; */
+  }
+
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+.inhov:focus {
     outline: none !important;
     border-color: rgb(174, 13, 13);
     /* box-shadow: 0 0 10px #719ECE; */
@@ -194,8 +249,8 @@ textarea{
 
 .fa-brands {
     color: #d2b48c;
-    font-size: 1.25rem;
-    padding-top: 20px;
+    /* font-size: 1.25rem;
+    padding-top: 20px; */
 
 }
 
@@ -205,31 +260,39 @@ textarea{
 
 
 
-.socialText {
+.socialText{
     color: #d2b48c;
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.25rem;
     padding-left: 20px;
     font-weight: 600;
+    /* border: 5px solid red; */
 
     font-family: times 'Times New Roman', Times, serif;
 
+
 }
-    
+.socialText:hover{
+    /* color: #a28a6c; */
+    color: red;
+}
+
+.socialText:hover i{
+    /* color: #a28a6c; */
+    color: red;
+}
+
 .socialMainContainer{
     text-align: center;
 
     font-family: times 'Times New Roman', Times, serif;
+    margin-top: 20px;
 
 
 }
-
-a{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-i:hover{
+/* .social:hover{
     color: red;
-}
-
+    border: 2px solid red;
+    display: inline;
+} */
