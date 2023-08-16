@@ -224,7 +224,7 @@ button {
 
 .inhov:focus {
     outline: none !important;
-    border-color: rgb(174, 13, 13);
+    border-color: #cc4949;
     /* box-shadow: 0 0 10px #719ECE; */
  }
 
