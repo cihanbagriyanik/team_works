@@ -10,16 +10,17 @@
             color: white;
             border: 7px solid rgb(255, 255, 255);
             display: grid;
-            grid-template-columns:100px 100px 100px 100px 100px 100px;
-            grid-template-rows:100px 100px 100px 100px 100px 100px;
+            grid-template-columns:repeat(8,1fr);
+            /* gap: 1rem; */
+            grid-template-rows:100px 100px 100px 100px 100px;
         }
         section header {
             padding-top: 10px;
             padding-left: 10px;
             border: 7px solid rgb(255, 255, 255);
             color: white;
-            grid-column: 1/8;
-            grid-row: 1;
+            grid-column: 1/9;
+            grid-row: 1 / 2;
         }
         section .bir {
             padding-top: 10px;
@@ -51,23 +52,23 @@
             border: 7px solid rgb(255, 255, 255);
             color: white;
             grid-column: 1 / 7;
-            grid-row: 4 / 6;
+            grid-row: 4 / 5;
         }
         section aside {
             padding-top: 10px;
             padding-left: 10px;
             border: 7px solid rgb(255, 255, 255);
             color: white;
-            grid-column: 7 / 8  ;
-            grid-row: 2 / 6;
+            grid-column: 7 / 9  ;
+            grid-row: 2 / 5;
         }
         section footer {
             padding-top: 10px;
             padding-left: 10px;
             border: 7px solid rgb(255, 255, 255);
             color: white;
-            grid-column: 1 / 8;
-            grid-row: 6;
+            grid-column: 1 / 9;
+            grid-row: 5 / 6;
         }
     </style>
 </head>
