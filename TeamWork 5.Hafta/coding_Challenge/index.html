@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+.container {
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+grid-template-rows: repeat(7, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+height: 90vh;
+}
+
+.box{
+background-color: blue;
+color: white;
+padding: 20px 0 0 20px;
+}
+
+.box1 { grid-area: 1 / 1 / 2 / 9; }
+.box2 { grid-area: 2 / 1 / 5 / 3; }
+.box3 { grid-area: 2 / 3 / 5 / 5; }
+.box4 { grid-area: 2 / 5 / 5 / 7; }
+.box5 { grid-area: 2 / 7 / 7 / 9; }
+.box6 { grid-area: 5 / 1 / 7 / 7; }
+.box7 { grid-area: 7 / 1 / 8 / 9; }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box box1">Header</div>
+        <div class="box box2">Small Box 1</div>
+        <div class="box box3">Small Box 2</div>
+        <div class="box box4">Small Box 3</div>
+        <div class="box box5">Sidebar</div>
+        <div class="box box6">Main Content</div>
+        <div class="box box7">Footer</div>
+        </div>
+
+</body>
+</html>
