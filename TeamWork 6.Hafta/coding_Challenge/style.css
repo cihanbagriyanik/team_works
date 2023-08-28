@@ -1,0 +1,120 @@
+:root {
+    --orange: rgb(229, 157, 89);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.price {
+    background-color: rgb(238, 238, 238);
+    height: 27rem;
+}
+
+.btn {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.btn:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.new {
+    color: var(--orange);
+}
+
+.ex {
+    text-decoration: line-through;
+    font-size: 80%;
+
+}
+
+.post-code {
+    width: 97%;
+}
+
+.post-code-div {
+    margin-left: -1rem;
+}
+
+.priceRowFirst {
+    margin-top: 3rem !important;
+    margin-bottom: -0.4rem;
+
+}
+
+.priceRowSecond {
+    margin-top: -0.2rem !important;
+}
+
+.priceBorder {
+    border-top: 1px solid gray !important;
+}
+
+/* .artiEksi {
+    background-color: rgb(217, 217, 217);
+    border-radius: 5px;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: -7px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+} */
+
+.artiBirEksi {
+    margin-top: 2.2rem;
+    padding: 2px;
+    width: 100px;
+}
+
+span{
+    font-size: 85%;
+}
+
+.nr {
+    font-size: 90%;
+    color: rgb(166, 166, 166);
+}
+
+select {
+    outline: none;
+    border: none;
+    padding: 0.37rem;
+
+    width: 80%;
+    text-align: center;
+    color: gray;
+
+}
+
+/* button {
+    outline: none ;
+    text-align: center;
+    height: 25px;
+    background-color:rgb(217, 217, 217) !important;
+    margin: auto;
+    margin-left: -9px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+} */
+
+button:active {
+    background-color:var(--orange) !important;
+
+}
+
+input{
+    outline: none;
+    width: 85%;
+}
+
+input::placeholder{
+    font-size: .9rem;
+}
+
