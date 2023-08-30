@@ -86,13 +86,13 @@ a.social {
 .client img {
     height: auto;
     max-height: 50px;
-  }
+}
 
 /* --------------------------------------------------------- */
 /*         -------------- 8- CONTACT --------------          */
 /* --------------------------------------------------------- */
 
-.contact{
+.contact {
     background: url("./img/map.jpeg");
     background-repeat: no-repeat;
     background-position: center;
@@ -100,4 +100,9 @@ a.social {
     padding-bottom: 20%;
     padding-top: 20%;
     color: #eee;
-  }
+}
+
+textarea {
+    resize: none;
+    height: 177px;
+}
