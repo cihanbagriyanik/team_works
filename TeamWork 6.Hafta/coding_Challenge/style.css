@@ -11,17 +11,39 @@
 
 .price {
     background-color: rgb(238, 238, 238);
-    height: 27rem;
+    height: max-content;
+
+    width: 400px;
+    min-width: 350px;
+    max-width: 400px;
+
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .btn {
     background-color: var(--orange);
     border-color: var(--orange);
+    color: white;
+
 }
 
 .btn:hover {
-    background-color: var(--orange);
-    border-color: var(--orange);
+    background-color: rgb(238, 238, 238);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+
+}
+
+.btn:active {
+    background-color: var(--orange) !important;
+    color: white !important;
+    border-color: var(--orange) !important;
+
 }
 
 .new {
@@ -31,55 +53,68 @@
 .ex {
     text-decoration: line-through;
     font-size: 80%;
+    color: rgb(166, 166, 166);
 
 }
 
-.post-code {
-    width: 97%;
-}
-
-.post-code-div {
-    margin-left: -1rem;
-}
-
-.priceRowFirst {
-    margin-top: 3rem !important;
-    margin-bottom: -0.4rem;
+.totalBox {
+    /* border: 2px solid var(--orange); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 3rem;
 
 }
 
-.priceRowSecond {
-    margin-top: -0.2rem !important;
+.subtotal {
+    border-top: 1px solid gray;
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+    margin-bottom: -0.5rem;
+
 }
 
-.priceBorder {
-    border-top: 1px solid gray !important;
+.vat {
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+
 }
 
-/* .artiEksi {
-    background-color: rgb(217, 217, 217);
-    border-radius: 5px;
-    width: 20px;
-    text-align: center;
-    font-weight: bold;
-    margin-left: -7px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-} */
+.shipping {
+    border-top: 1px solid var(--orange);
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+
+}
+
+.total {
+    border-top: 2px solid var(--orange);
+    line-height: 1rem;
+    padding-top: 0.3rem;
+
+}
 
 .artiBirEksi {
-    margin-top: 2.2rem;
-    padding: 2px;
     width: 100px;
+ 
 }
 
-span{
+span {
     font-size: 85%;
+    color: var(--orange);
+
+}
+
+sup{
+    color: var(--orange);
+
 }
 
 .nr {
     font-size: 90%;
     color: rgb(166, 166, 166);
+
 }
 
 select {
@@ -88,33 +123,91 @@ select {
     padding: 0.37rem;
 
     width: 80%;
-    text-align: center;
+    text-align: left;
     color: gray;
+    margin-left: 0.3rem;
 
 }
 
-/* button {
-    outline: none ;
-    text-align: center;
-    height: 25px;
-    background-color:rgb(217, 217, 217) !important;
-    margin: auto;
-    margin-left: -9px;
-    padding-top: 10px;
-    padding-bottom: 3px;
-} */
+.form-check-input:checked{
+    background-color: var(--orange) !important;
+}
 
 button:active {
-    background-color:var(--orange) !important;
+    background-color: var(--orange) !important;
 
 }
 
-input{
+input {
     outline: none;
     width: 85%;
+
 }
 
-input::placeholder{
+input::placeholder {
     font-size: .9rem;
+
 }
 
+img {
+    max-width: max-content;
+
+}
+
+.remove{
+    border: none;
+    color: whitesmoke;
+    background-color:crimson;
+    border-radius: 5px;
+    padding: 0 1.6rem;
+    font-size: 0.8rem;
+
+}
+
+.remove:hover{
+    color: crimson;
+    background-color:grey;
+
+}
+
+.remove:active{
+    color: whitesmoke;
+    background-color:crimson !important;
+
+}
+
+@media screen and (max-width:767px) {
+    .left {
+        order: 1;
+        /* text-align: center; */
+        /* display: flex; */
+        justify-content: center !important;
+
+    }
+
+    .contactInfo {
+        margin-top: 2rem;
+    }
+
+    .price {
+        /* height: 27rem; */
+        width: 400px;
+        max-width: 400px;
+
+    }
+
+    img {
+        max-width: max-content;
+
+    }
+
+}
+
+@media screen and (max-width:991px) {
+
+    select {
+        width: 85%;
+    
+    }
+
+}
