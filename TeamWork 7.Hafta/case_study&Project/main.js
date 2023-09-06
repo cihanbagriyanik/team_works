@@ -31,4 +31,4 @@ result = opr === "+" ? num1 + num2 :
          "Bir sayı sıfıra bolunemez." : 
          "Hatalı işlem yapıldı.";
 
-console.log(`Sonuc:${result}`);
+console.log(`Sonuc = ${result}`);
