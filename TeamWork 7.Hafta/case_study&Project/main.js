@@ -1,5 +1,5 @@
 const num1 = +prompt("Lutfen islem yapmak istediginiz ilk numarayi giriniz?")
-const opr = prompt("Lutfen yapmak istedginiz islemin operatorunu giriniz?")
+const opr = prompt("Lutfen yapmak istedginiz islemin operatorunu giriniz?(+ , - , * , /)")
 const num2 = +prompt("Lutfen islem yapmak istediginiz Ikinci numarayi giriniz?")
 let result;
 
