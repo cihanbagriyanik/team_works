@@ -1,15 +1,14 @@
 //asya=>yasa
 //kacmak=>cakmal
 
-const str1="listen";
-const str2="silent";
+const str1 = "listen";
+const str2 = "silent";
 
-const areAnagrams=(str1,str2)=>{
+const areAnagrams = (str1, str2) => {
 
-return str1.split("").sort().join("")===str2.split("").sort().join("") ? "anagram":"anagram degildir"
+    return str1.split("").sort().join("") === str2.split("").sort().join("") ? "anagram" : "anagram degildir"
 
 }
-
 
 console.log(areAnagrams("listen", "silent")); // Should print true
 console.log(areAnagrams("triangle", "integral")); // Should print true
