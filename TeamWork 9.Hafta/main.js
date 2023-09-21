@@ -1,12 +1,12 @@
 function removeDuplicates(arr) {
-    const uniqueArray = [];
+    const array = [];
 
-    for (const element of arr) {
-        if (!uniqueArray.includes(element)) {
-            uniqueArray.push(element);
+    for (const i of arr) {
+        if (!array.includes(i)) {
+            array.push(i);
         }
     }
-    return uniqueArray;
+    return array;
 }
 
 const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
