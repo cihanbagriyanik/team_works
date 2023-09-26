@@ -60,9 +60,9 @@ products.map((a) => {
 // console.log(ikinci);
 // console.log(ucuncu);
 const birleşik = { Clothes: ilk, Electronics: ikinci, Home: ucuncu };
-console.log(birleşik);
+// console.log(birleşik);
 
-console.log(Object.keys(birleşik));
+// console.log(Object.keys(birleşik));
 const kategorideOrtalamaFiyat = Object.keys(birleşik).map((category) => {
     const toplam = birleşik[category].reduce(
         (toplam, urun) => toplam + urun.price,
@@ -73,7 +73,7 @@ const kategorideOrtalamaFiyat = Object.keys(birleşik).map((category) => {
         ortalama: toplam / birleşik[category].length,
     };
 });
-console.log(kategorideOrtalamaFiyat);
+// console.log(kategorideOrtalamaFiyat);
 const yuksekFiyatKategori = kategorideOrtalamaFiyat.filter(eleman => eleman.ortalama > 50);
 console.log(yuksekFiyatKategori)
 
