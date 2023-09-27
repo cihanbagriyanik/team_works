@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 
@@ -29,7 +30,7 @@ body {
 .value {
   font-size: 8rem;
   font-weight: 400;
-  height: 14rem;
+  height: 20rem;
   margin-bottom: 20px;
   margin-right: 20px;
   text-align: right;
@@ -37,7 +38,7 @@ body {
 
 .buttons-container {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
