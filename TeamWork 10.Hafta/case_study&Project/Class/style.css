@@ -35,13 +35,14 @@ body {
 }
 
 .buttons-container {
+    width: 100%;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,16 +55,16 @@ body {
     transition: filter .3s;
 }
 
-.button.function{
+.button.function {
     color: black;
     background-color: #a5a5a5;
 }
 
-.button.operator{
-   background-color: #f1a33c;
+.button.operator {
+    background-color: #f1a33c;
 }
 
-.button.number-0{
+.button.number-0 {
     justify-content: flex-start;
     grid-column: 1 / span 2;
     border-radius: 70px;
@@ -80,3 +81,36 @@ body {
     filter: brightness(120%);
 }
 
+@media screen and (max-width: 560px) {
+
+    .value {
+        font-size: 5rem;
+        font-weight: 300;
+        height: 10rem;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .calculator {
+        border-radius: 50px;
+        height: 600px;
+        width: 350px;
+    }
+
+    .buttons-container {
+        gap: 0.8rem;
+    }
+
+    .button {
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .button.number-0 {
+        border-radius: 40px;
+        padding-left: 30px;
+        width: 9rem;
+    }
+}
