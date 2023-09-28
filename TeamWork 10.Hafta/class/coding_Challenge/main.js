@@ -24,6 +24,58 @@ const products = [
 ];
 
 
+// const clothes = products.filter((a) => a.category === "Clothes")
+// const a = clothes.reduce((toplam, a) => toplam + a.price, 0) / clothes.length
+
+// const electronics = products.filter((a) => a.category === "Electronics")
+// const b = electronics.reduce((toplam, a) => toplam + a.price, 0) / electronics.length
+
+// const home = products.filter((a) => a.category === "Home")
+// const c = home.reduce((toplam, a) => toplam + a.price, 0) / home.length
+
+// let sonuc = []
+// sonuc.push(a)
+// sonuc.push(b)
+// sonuc.push(c)
+// console.log(sonuc);
+
+// sonuc = sonuc.filter((a) => a > 50)
+// console.log(sonuc);
+
+const ilk = [];
+const ikinci = [];
+const ucuncu = [];
+
+products.map((a) => {
+    if (a.category == "Clothes") {
+        ilk.push(a);
+    } else if (a.category == "Electronics") {
+        ikinci.push(a);
+    } else {
+        ucuncu.push(a);
+    }
+});
+// console.log(ilk);
+// console.log(ikinci);
+// console.log(ucuncu);
+const birleşik = { Clothes: ilk, Electronics: ikinci, Home: ucuncu };
+// console.log(birleşik);
+
+// console.log(Object.keys(birleşik));
+const kategorideOrtalamaFiyat = Object.keys(birleşik).map((category) => {
+    const toplam = birleşik[category].reduce(
+        (toplam, urun) => toplam + urun.price,
+        0
+    );
+    return {
+        category: category,
+        ortalama: toplam / birleşik[category].length,
+    };
+});
+// console.log(kategorideOrtalamaFiyat);
+const yuksekFiyatKategori = kategorideOrtalamaFiyat.filter(eleman => eleman.ortalama > 50);
+console.log(yuksekFiyatKategori)
+
 
 
 
