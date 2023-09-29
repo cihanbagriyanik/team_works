@@ -10,6 +10,8 @@
 //     { category: 'Electronics', average: 55 }
 // ]
 
+//* -------------------------------------------------------------------------- */
+
 const products = [
     { name: "Product 1", price: 20, category: "Electronics" },
     { name: "Product 2", price: 30, category: "Clothes" },
@@ -23,59 +25,65 @@ const products = [
     { name: "Product 10", price: 40, category: "Home" },
 ];
 
-// const clothes = products.filter((a) => a.category === "Clothes")
-// const a = clothes.reduce((toplam, a) => toplam + a.price, 0) / clothes.length
-
-// const electronics = products.filter((a) => a.category === "Electronics")
-// const b = electronics.reduce((toplam, a) => toplam + a.price, 0) / electronics.length
-
-// const home = products.filter((a) => a.category === "Home")
-// const c = home.reduce((toplam, a) => toplam + a.price, 0) / home.length
-
-// let sonuc = []
-// sonuc.push(a)
-// sonuc.push(b)
-// sonuc.push(c)
-// console.log(sonuc);
-
-// sonuc = sonuc.filter((a) => a > 50)
-// console.log(sonuc);
+/* Use map to create an object with category as the key
+and an array of products as the value */
+const productsByCategory = products.reduce((acc, product) => {
+    const category = product.category;
+    if (!acc[category]) {
+        acc[category] = [];
+    }
+    acc[category].push(product);
+    return acc;
+}, {});
+console.log(productsByCategory);
+// Use map to calculate the average price for each category
+const avgPriceByCategory = Object.keys(productsByCategory).map(category => {
+    const sum = productsByCategory[category].reduce((acc, product) => acc +
+        product.price, 0);
+    return {
+        category: category, average: sum / productsByCategory[category].length
+    };
+});
+// Use filter to only select categories with an average above a certain threshold
+const highPricedCategories = avgPriceByCategory.filter(category => category.average
+    > 50);
+console.log(highPricedCategories)
 
 //* -------------------------------------------------------------------------- */
 
-const ilk = [];
-const ikinci = [];
-const ucuncu = [];
+// const ilk = [];
+// const ikinci = [];
+// const ucuncu = [];
 
-products.map((a) => {
-    if (a.category == "Clothes") {
-        ilk.push(a);
-    } else if (a.category == "Electronics") {
-        ikinci.push(a);
-    } else {
-        ucuncu.push(a);
-    }
-});
-// console.log(ilk);
-// console.log(ikinci);
-// console.log(ucuncu);
-const birleşik = { Clothes: ilk, Electronics: ikinci, Home: ucuncu };
-// console.log(birleşik);
+// products.map((a) => {
+//     if (a.category == "Clothes") {
+//         ilk.push(a);
+//     } else if (a.category == "Electronics") {
+//         ikinci.push(a);
+//     } else {
+//         ucuncu.push(a);
+//     }
+// });
+// // console.log(ilk);
+// // console.log(ikinci);
+// // console.log(ucuncu);
+// const birleşik = { Clothes: ilk, Electronics: ikinci, Home: ucuncu };
+// // console.log(birleşik);
 
-// console.log(Object.keys(birleşik));
-const kategorideOrtalamaFiyat = Object.keys(birleşik).map((category) => {
-    const toplam = birleşik[category].reduce(
-        (toplam, urun) => toplam + urun.price,
-        0
-    );
-    return {
-        category: category,
-        ortalama: toplam / birleşik[category].length,
-    };
-});
-// console.log(kategorideOrtalamaFiyat);
-const yuksekFiyatKategori = kategorideOrtalamaFiyat.filter(eleman => eleman.ortalama > 50);
-console.log(yuksekFiyatKategori)
+// // console.log(Object.keys(birleşik));
+// const kategorideOrtalamaFiyat = Object.keys(birleşik).map((category) => {
+//     const toplam = birleşik[category].reduce(
+//         (toplam, urun) => toplam + urun.price,
+//         0
+//     );
+//     return {
+//         category: category,
+//         ortalama: toplam / birleşik[category].length,
+//     };
+// });
+// // console.log(kategorideOrtalamaFiyat);
+// const yuksekFiyatKategori = kategorideOrtalamaFiyat.filter(eleman => eleman.ortalama > 50);
+// console.log(yuksekFiyatKategori)
 
 
 
@@ -99,39 +107,66 @@ const employees = [
     { name: "Mike", salary: 65000, department: "IT" },
     { name: "Emily", salary: 80000, department: "HR" },
     { name: "David", salary: 70000, department: "IT" },
-    // { name: "Saban", salary: 100000, department: "IT" },
+    { name: "Saban", salary: 100000, department: "IT" },
 ];
 
-const bir = [];
-const iki = [];
-
-employees.map((a) => {
-    if (a.department == "IT") {
-        bir.push(a);
-    } else {
-        iki.push(a);
+/* Use reduce to create an object with department as the key
+and an array of employee objects as the value */
+const employeesByDepartment = employees.reduce((acc, employee) => {
+    const department = employee.department;
+    if (!acc[department]) {
+        acc[department] = [];
     }
-});
-
-// console.log(bir);
-// console.log(iki);
-const birleşik2 = { IT:bir, HR:iki};
-// console.log(birleşik2);
-
-
-const departmanOrtalamaGelir = Object.keys(birleşik2).map((department) => {
-    const toplam = birleşik2[department].reduce(
-        (toplam, a) => toplam + a.salary,
-        0
-    );
+    acc[department].push(employee);
+    return acc;
+}, {});
+console.log(employeesByDepartment);
+// Use map to calculate the average salary for each department
+const avgSalaryByDepartment = Object.keys(employeesByDepartment).map(department => {
+    const sum = employeesByDepartment[department].reduce((acc, employee) => acc +
+        employee.salary, 0);
     return {
-        department: department,
-        ortalama: (toplam / birleşik2[department].length).toFixed(),
+        department: department, average: sum /
+            employeesByDepartment[department].length
     };
 });
+// Use filter to only select departments with an average above a certain threshold
+const highPaidDepartments = avgSalaryByDepartment.filter(department =>
+    department.average > 65000);
+console.log(highPaidDepartments)
 
-const yuksekGelirDepartman = departmanOrtalamaGelir.filter(department => department.ortalama > 65000);
-console.log(yuksekGelirDepartman)
+//* -------------------------------------------------------------------------- */
+
+// const bir = [];
+// const iki = [];
+
+// employees.map((a) => {
+//     if (a.department == "IT") {
+//         bir.push(a);
+//     } else {
+//         iki.push(a);
+//     }
+// });
+
+// // console.log(bir);
+// // console.log(iki);
+// const birleşik2 = { IT:bir, HR:iki};
+// // console.log(birleşik2);
+
+
+// const departmanOrtalamaGelir = Object.keys(birleşik2).map((department) => {
+//     const toplam = birleşik2[department].reduce(
+//         (toplam, a) => toplam + a.salary,
+//         0
+//     );
+//     return {
+//         department: department,
+//         ortalama: (toplam / birleşik2[department].length).toFixed(),
+//     };
+// });
+
+// const yuksekGelirDepartman = departmanOrtalamaGelir.filter(department => department.ortalama > 65000);
+// console.log(yuksekGelirDepartman)
 
 
 
