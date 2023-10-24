@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: greenyellow;
+    font-size: 5rem;
+    letter-spacing: 0.7rem;
+    text-align: center;
+}
