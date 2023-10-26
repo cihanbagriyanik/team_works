@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 1,
     name: "HTML",
@@ -41,3 +41,5 @@ export const data = [
     image: "https://mui.com/static/logo.png",
   },
 ];
+
+export default data;
