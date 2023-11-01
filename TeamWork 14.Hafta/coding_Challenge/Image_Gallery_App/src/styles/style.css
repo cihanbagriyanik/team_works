@@ -79,6 +79,7 @@ h1 {
      object-fit: cover;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .pictures .picture .imageContainer img:hover {
