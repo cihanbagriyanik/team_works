@@ -13,7 +13,8 @@ body {
 }
 
 .card-container {
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg);
+    /* background-image: url(https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg); */
+    background-color: #1D4289;
     width: 90%;
 }
 
