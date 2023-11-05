@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PlayerCard from './PlayerCard'
 
 import { Row } from "react-bootstrap"
@@ -7,17 +7,23 @@ import { data } from "../helper/data"
 
 const CardContainer = () => {
 
-    //!
+    const [filter, setFilter] = useState('');
+
+    const filteredData = data.filter(item =>
+        item.name.toLowerCase().includes(filter.toLowerCase())
+    );
+
 
     return (
         <>
-            <input className='w-50 m-auto form-control' type="search" placeholder='Search Player...' />
+            <input className='w-50 m-auto form-control' type="search" placeholder='Search Player...'
+                onChange={e => setFilter(e.target.value)} />
 
-            <div className='card-container rounded-4 my-4 p-3 d-flex'>
+            <div className='justify-content-center card-container rounded-4 my-4 p-3 d-flex'>
 
 
-                <Row className='justify-content-center gap-3'>
-                    {data.map((item) => <PlayerCard {...item} />)}
+                <Row className='d-flex justify-content-center gap-3'>
+                    {filteredData.map((item) => <PlayerCard {...item} />)}
                 </Row>
 
             </div>
