@@ -1,0 +1,39 @@
+.list {
+    padding: 14px 20px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    /* background-color: red; */
+}
+
+.todo_radio {
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background-color: #ad02fe;
+    border: 1px solid #bf56ff;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.todo_text {
+    flex: 1;
+    border-bottom: 1px solid #484040;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    text-align: left;
+
+}
+
+.bi-trash{
+    font-size: 1.5rem;
+    
+    
+}
