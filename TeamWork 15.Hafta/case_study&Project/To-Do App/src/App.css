@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 3rem;
+}
+
+.app {
+    height: 100vh;
+    width: 100vw;
+    background-color: #181824;
+}
+
+.todo {
+    /* height: 28rem; */
+    width: 28rem;
+    /* background-color: red; */
+}
+
+.input {
+    background-color: #25273c !important;
+    box-shadow: none !important;
+}
+
+.input::placeholder {
+    color: white !important;
+}
+
+Button {
+    background-color: green !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+Button:hover {
+    filter: brightness(150%);
+}
+
+
+
+/*! TODO LIST */
+
+.todo_list{
+    background-color: #25273c !important;
+    height: 100% !important;
+    margin-top: 2rem !important;
+    overflow: auto !important;
+    
+
+}
