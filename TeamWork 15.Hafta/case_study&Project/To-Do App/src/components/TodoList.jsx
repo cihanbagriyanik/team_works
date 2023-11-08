@@ -36,13 +36,6 @@ const TodoList = () => {
 
     }
 
-    const getAllTodos = () => {
-        let stored = JSON.parse(localStorage.getItem("todo"))
-
-        if (stored) {
-            setAllTodos(stored)
-        }
-    }
 
     const toggleChecked = (id) => {
         let updatedTodos = [...allTodos].map((todo) => {
@@ -55,15 +48,25 @@ const TodoList = () => {
         setAllTodos(updatedTodos)
     }
 
+
     const deleteTodo = (id) => {
         const filteredTodo = allTodos.filter((todo) => todo.id !== id)
         setAllTodos(filteredTodo)
     }
 
+
+
+    const getAllTodos = () => {
+        let stored = JSON.parse(localStorage.getItem("todo"))
+
+        if (stored) {
+            setAllTodos(stored)
+        }
+    }
+
     useEffect(() => {
         getAllTodos()
     }, [])
-
 
     useEffect(() => {
         localStorage.setItem("todo", JSON.stringify(allTodos))
@@ -79,9 +82,10 @@ const TodoList = () => {
                     type='text'
                     value={todo}
                     onChange={(e) => setTodo(e.target.value)}
+                    onKeyDown={(e) => (e.key === "Enter") ? addTodo(e) : ""}
                 />
 
-                <Button className='but text-white ' variant="outline-secondary" id="button-addon2" onClick={addTodo}>
+                <Button className='but text-white ' variant="outline-secondary" id="button-addon2" onClick={addTodo} >
                     <i class="bi bi-arrow-bar-down" ></i>
                 </Button>
             </InputGroup>
@@ -94,7 +98,6 @@ const TodoList = () => {
                 }
 
                 {
-
                     allTodos.length === 0 && (
                         <p className='empty'>There are no Todo's</p>
                     )
