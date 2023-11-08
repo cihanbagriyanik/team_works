@@ -14,7 +14,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 const TodoList = () => {
 
     const [todo, setTodo] = useState("")
-    const [allTodos, setAllTodos] = useState([])
+    const [allTodos, setAllTodos] = useState(JSON.parse(localStorage.getItem("todo")) || [])
 
     const addTodo = (e) => {
 
@@ -53,20 +53,6 @@ const TodoList = () => {
         const filteredTodo = allTodos.filter((todo) => todo.id !== id)
         setAllTodos(filteredTodo)
     }
-
-
-
-    const getAllTodos = () => {
-        let stored = JSON.parse(localStorage.getItem("todo"))
-
-        if (stored) {
-            setAllTodos(stored)
-        }
-    }
-
-    useEffect(() => {
-        getAllTodos()
-    }, [])
 
     useEffect(() => {
         localStorage.setItem("todo", JSON.stringify(allTodos))
