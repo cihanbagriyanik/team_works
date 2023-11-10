@@ -20,7 +20,7 @@ function HastaEkle({ yenile, setHastalar, dr }) {
 
 
     return (
-        <Form className='m-4'>
+        <Form className='m-4 w-100 forM'>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                     <Form.Label>Full Name</Form.Label>
@@ -28,7 +28,7 @@ function HastaEkle({ yenile, setHastalar, dr }) {
                         required
                         type="text"
                         placeholder="Please enter your Full Name"
-
+                        className='inputs'
                     />
 
                 </Form.Group>
@@ -37,7 +37,7 @@ function HastaEkle({ yenile, setHastalar, dr }) {
             <Row className="mb-3">
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                     <Form.Label>Date and Time</Form.Label>
-                    <Form.Control type="datetime-local" required />
+                    <Form.Control className='inputs' type="datetime-local" required />
                 </Form.Group>
             </Row>
 

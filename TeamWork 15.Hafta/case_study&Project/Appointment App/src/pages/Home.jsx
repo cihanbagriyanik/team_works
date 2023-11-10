@@ -61,11 +61,11 @@ const Home = () => {
                             </Card.Footer>
                         </Card>
                     )}
-                {active && <HastaEkle yenile={yenile} setHastalar={setHastalar} dr={drListe[0].doktor} />}
+                    {active || <HastaEkle yenile={yenile} setHastalar={setHastalar} dr={drListe[0].doktor} />}
                 </div>
             </div>
 
-            
+
 
             {liste.map((a) => <HastaListe {...a} key={a.id} />)}
 
