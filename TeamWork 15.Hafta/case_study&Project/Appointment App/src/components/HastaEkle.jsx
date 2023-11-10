@@ -1,10 +1,22 @@
 import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 
+import { v4 as uuidv4 } from 'uuid';
+// uuidv4();
 
-function HastaEkle() {
+
+function HastaEkle({ yenile, setHastalar, dr }) {
 
 
+
+
+    const yeniHasta = {
+        id: uuidv4(),
+        text: {},
+        day: {},
+        bittiMi: false,
+        doktor: {},
+    }
 
 
     return (
@@ -18,7 +30,7 @@ function HastaEkle() {
                         placeholder="Please enter your Full Name"
 
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+
                 </Form.Group>
             </Row>
 
@@ -30,14 +42,20 @@ function HastaEkle() {
             </Row>
 
             <div className='mt-3'>
-                <Button type="submit">..... icin kayit olustur</Button>
+                <Button type="submit">{dr} icin kayit olustur</Button>
             </div>
 
             <div className='mt-3'>
-                <Button type="submit">Ana Sayfa</Button>
+                <Button
+                    type="button"
+                    onClick={yenile}
+                >
+                    Ana Sayfa
+                </Button>
             </div>
 
         </Form>
+
     );
 }
 
