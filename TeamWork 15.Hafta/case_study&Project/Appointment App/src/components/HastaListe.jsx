@@ -5,7 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { TiDelete } from 'react-icons/ti';
 
 
-const HastaListe = ({ id, text, day, bittiMi, doktor }) => {
+const HastaListe = ({ id, text, day, bittiMi, doktor, setHastalar, hastalar }) => {
 
 
 
@@ -27,7 +27,9 @@ const HastaListe = ({ id, text, day, bittiMi, doktor }) => {
                 </div>
 
                 <div>
-                    <TiDelete className='text-danger' size={28} type='button' />
+                    <TiDelete className='text-danger' size={28} type='button'
+                    //* onClick={() => setHastalar(hastalar.filter((a) => a.id !== id.id))} derste bole yaptik
+                    />
                 </div>
             </ListGroup.Item>
 
