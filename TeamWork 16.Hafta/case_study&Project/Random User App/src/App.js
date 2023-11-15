@@ -32,6 +32,7 @@ function App() {
     // console.log(veri.data);
   };
 
+  
   useEffect(() => {
     getData();
   }, []);
