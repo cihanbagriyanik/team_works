@@ -1,0 +1,213 @@
+:root {
+    --orange: rgb(229, 157, 89);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.price {
+    background-color: rgb(238, 238, 238);
+    height: max-content;
+
+    width: 400px;
+    min-width: 350px;
+    max-width: 400px;
+
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.btn {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: white;
+
+}
+
+.btn:hover {
+    background-color: rgb(238, 238, 238);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+
+}
+
+.btn:active {
+    background-color: var(--orange) !important;
+    color: white !important;
+    border-color: var(--orange) !important;
+
+}
+
+.new {
+    color: var(--orange);
+}
+
+.ex {
+    text-decoration: line-through;
+    font-size: 80%;
+    color: rgb(166, 166, 166);
+
+}
+
+.totalBox {
+    /* border: 2px solid var(--orange); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 3rem;
+
+}
+
+.subtotal {
+    border-top: 1px solid gray;
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+    margin-bottom: -0.5rem;
+
+}
+
+.vat {
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+
+}
+
+.shipping {
+    border-top: 1px solid var(--orange);
+    line-height: 0.8rem;
+    padding-top: 0.2rem;
+
+}
+
+.total {
+    border-top: 2px solid var(--orange);
+    line-height: 1rem;
+    padding-top: 0.3rem;
+
+}
+
+.artiBirEksi {
+    width: 100px;
+ 
+}
+
+span {
+    font-size: 85%;
+    color: var(--orange);
+
+}
+
+sup{
+    color: var(--orange);
+
+}
+
+.nr {
+    font-size: 90%;
+    color: rgb(166, 166, 166);
+
+}
+
+select {
+    outline: none;
+    border: none;
+    padding: 0.37rem;
+
+    width: 80%;
+    text-align: left;
+    color: gray;
+    margin-left: 0.3rem;
+
+}
+
+.form-check-input:checked{
+    background-color: var(--orange) !important;
+}
+
+button:active {
+    background-color: var(--orange) !important;
+
+}
+
+input {
+    outline: none;
+    width: 85%;
+
+}
+
+input::placeholder {
+    font-size: .9rem;
+
+}
+
+img {
+    max-width: max-content;
+
+}
+
+.remove{
+    border: none;
+    color: whitesmoke;
+    background-color:crimson;
+    border-radius: 5px;
+    padding: 0 1.6rem;
+    font-size: 0.8rem;
+
+}
+
+.remove:hover{
+    color: crimson;
+    background-color:grey;
+
+}
+
+.remove:active{
+    color: whitesmoke;
+    background-color:crimson !important;
+
+}
+
+@media screen and (max-width:767px) {
+    .left {
+        order: 1;
+        /* text-align: center; */
+        /* display: flex; */
+        justify-content: center !important;
+
+    }
+
+    .contactInfo {
+        margin-top: 2rem;
+    }
+
+    .price {
+        /* height: 27rem; */
+        width: 400px;
+        max-width: 400px;
+
+    }
+
+    img {
+        max-width: max-content;
+
+    }
+
+}
+
+@media screen and (max-width:991px) {
+
+    select {
+        width: 85%;
+    
+    }
+
+}

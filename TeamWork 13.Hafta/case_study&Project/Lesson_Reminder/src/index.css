@@ -1,0 +1,56 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 104, 1) 48%, rgba(0, 212, 255, 1) 100%);
+
+
+}
+
+.container1{
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  background-color: #ffffff37;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.btn{
+  
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  
+  
+}
+button{
+  background-color: rgb(38, 90, 202);
+  color: #fff;
+  padding: 0.6rem 3rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  /* width: 7rem; */
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.lesson {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  
+}
+
+p{
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  
+}

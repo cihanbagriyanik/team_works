@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.fotoS {
+    height: 18rem;
+    width: 25%;
+}
+
+.hastaEklestil {
+    display: flex;
+    margin-left: 1rem;
+
+
+}
+
+.inputs {
+    width: 25rem !important;
+}

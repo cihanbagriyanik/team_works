@@ -1,0 +1,60 @@
+.list {
+    padding: 14px 20px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    /* background-color: red; */
+}
+
+.todo_radio,
+.todo_radio_unchecked {
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background-color: #ad02fe;
+    border: 1px solid #bf56ff;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.todo_text,
+.todo_text_checked {
+    flex: 1;
+    border-bottom: 1px solid #484040;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    text-align: left;
+    /* cursor: pointer; */
+
+}
+
+.todo_delete {
+    font-size: 1.5rem;
+
+    cursor: pointer;
+    color: #ad02fe;
+    padding-left: 5px;
+    /* padding-right: 4px; */
+
+}
+
+.todo_delete:hover {
+    filter: brightness(150%);
+
+}
+
+.todo_radio_unchecked {
+    background-color: transparent;
+}
+
+.todo_text_checked {
+    text-decoration: line-through;
+    color: #0f90a1;
+}
