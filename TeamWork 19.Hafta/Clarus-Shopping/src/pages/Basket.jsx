@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { useSelector } from "react-redux";
 import BasketCard from "../components/BasketCard";
 import EmptyBasketTotal from "../components/EmptyBasketTotal";
