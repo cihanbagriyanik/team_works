@@ -1,56 +1,61 @@
 import React from "react";
-
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
-
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import {
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "../redux/action/basketAction";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
+  const { basket } = useSelector(state => state.baskets);
+
+  const handleAdd = () => {
+    const isAdded = basket.some(item => item.id === product.id);
+    if (isAdded) {
+      alert("This product already added!");
+    } else {
+      dispatch(add([...basket, {...product,quantity:1}]));
+    }
+  };
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexWrap: "wrap",
-        margin: "2rem 1.5rem",
-      }}
-    >
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="green iguana"
-        />
-        <CardContent sx={{ display: "flex" }}>
-          <Typography variant="body1" gutterBottom color="text.secondary">
-            Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+    <Card sx={{ width: 345 }}>
+      <CardMedia
+        component="img"
+        height={300}
+        image={product.image}
+        title={product.title}
+        sx={{ objectFit: "contain" }}
+      />
+      <CardContent sx={{ p: 1, mb: 1 }}>
+        <Box display="flex" justifyContent="space-between" height={70}>
+          <Typography variant="body1" gutterBottom>
+            {product.title}
           </Typography>
-          <Typography variant="h6" gutterBottom color="text.black">
-            109.95$
+          <Typography variant="h6" pl={1} color="initial">
+            {product.price + "$"}
           </Typography>
-        </CardContent>
-        <CardActions
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography variant="body2" color="text.secondary">
-            men's clothing
-          </Typography>
-          <Button size="medium" color="primary">
-            <AddShoppingCartIcon />
-          </Button>
-        </CardActions>
-      </Card>
-    </Box>
+        </Box>
+      </CardContent>
+      <CardActions
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}>
+        <Typography variant="body2" color="textSecondary">
+          {product.category}
+        </Typography>
+        <IconButton aria-label="Add to Cart" color="primary" onClick={handleAdd}>
+          <AddShoppingCartIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
   );
 };
 

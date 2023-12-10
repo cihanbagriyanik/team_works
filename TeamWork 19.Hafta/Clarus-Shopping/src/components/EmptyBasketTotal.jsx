@@ -1,17 +1,20 @@
+import { Typography } from "@mui/material";
 import React from "react";
-
-import { Container, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const EmptyBasketTotal = () => {
   return (
-    <Container sx={{ padding: "2rem", textAlign: "center" }}>
-      <Typography variant="h5" gutterBottom color="red">
-        You have no items in your shopping cart,{" "}
-        <a href="/" style={{ textDecoration: "none", color: "blue" }}>
-          start adding some!
-        </a>
-      </Typography>
-    </Container>
+    <Typography variant="h5" color={"error"}>
+      You have no items in your shopping cart,
+      <NavLink
+        to="/"
+        style={{
+          textDecoration: "none",
+          color: "blue",
+        }}>
+        start adding some!
+      </NavLink>
+    </Typography>
   );
 };
 
