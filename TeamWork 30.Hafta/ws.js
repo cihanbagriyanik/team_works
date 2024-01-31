@@ -44,7 +44,7 @@ Express ve NodeJS birbirinden birçok açıdan farklılık gösterir. İşte baz
 
 Özellik	                Express	                                      NodeJS
 Amaç	                Web çerçevesi	                              JavaScript çalışma zamanı
-Üzerine İnşa	        NodeJS	                                      Chrome'un V8 JavaScript motoru
+Üzerine İnşa	        NodeJS	                                    Chrome'un V8 JavaScript motoru
 Odak	                Sunucu tarafı geliştirme    	              Genel amaçlı JavaScript programlama
 Ana Özellikler  	    Rotalama, orta yazılım, şablona alma	      Non-blocking I/O, etkinlik yönlendirmeli programlama
 Kullanım Alanları	    Web uygulamaları, RESTful API'lar	          Sunucu tarafı betikleme, komut satırı araçları oluşturma"
@@ -91,29 +91,29 @@ app.use(), tüm HTTP yöntemleri için yürütülmesi gereken middleware'i belir
 /* -------------------------------------------------------------------------- */
 //? Soru-9 "9. Gelen isteğin methodunu ve URL'sini konsola yazdırmak için bir middleware yazın."
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-const PORT = 8000;
+// const PORT = 8000;
 
-function logRequest(req, res, next) {
-  console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
-  next();
-}
-app.use(logRequest);
-
-// app.use((req, res, next) => {
-//   console.log("request method:", req.method, "request url:", req.url);
+// function logRequest(req, res, next) {
+//   console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
 //   next();
+// }
+// app.use(logRequest);
+
+// // app.use((req, res, next) => {
+// //   console.log("request method:", req.method, "request url:", req.url);
+// //   next();
+// // });
+
+// // app.get("/", (req, res) => {
+// //   res.send("<h1>hello, user!</h1>");
+// // });
+
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
 // });
-
-app.get("/", (req, res) => {
-  res.send("<h1>hello, user!</h1>");
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
 
 /* -------------------------------------------------------------------------- */
 //? Soru-10 "10. Express.js içinde, sorgu parametreleri olarak geçilen iki sayının toplamını hesaplayan bir fonksiyon yazın."
